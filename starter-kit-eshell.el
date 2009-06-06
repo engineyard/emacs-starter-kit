@@ -32,5 +32,10 @@
   (let ((inhibit-read-only t))
     (erase-buffer)))
 
+;; Add /opt binaries for MacPorts
+(setq exec-path (append '("/opt/local/bin" "/opt/local/sbin") exec-path))
+;; Get exec-path working in eshell
+(setenv "PATH" (mapconcat (lambda (dir) (or dir ".")) exec-path ":"))
+
 (provide 'starter-kit-eshell)
 ;;; starter-kit-eshell.el ends here
