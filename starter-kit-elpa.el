@@ -9,7 +9,8 @@
                                    'css-mode
                                    ;; 'nxml
                                    'gist
-                                   'paredit)
+                                   'paredit
+                                   'nav)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()
