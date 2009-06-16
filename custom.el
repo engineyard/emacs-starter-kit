@@ -42,6 +42,9 @@
 (require 'spiffy-ruby-mode)
 (add-hook 'ruby-mode-hook 'spiffy-ruby-mode)
 
+(setq ruby-deep-arglist nil)
+(setq ruby-deep-indent-paren nil)
+
 ;; rackup files are ruby too
 (add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
 
