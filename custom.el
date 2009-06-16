@@ -48,3 +48,16 @@
 (require 'compile)
 (setq ansi-color-for-comint-mode t)
 (add-hook 'comint-output-filter-functions 'ansi-color-process-output)
+
+;;;;;;;; emacs-lisp development
+(add-to-list 'load-path "~/.emacs.d/vendor/el-expectations")
+(defun eval-and-execute-expectations-buffer ()
+  (interactive)
+  (eval-buffer)
+  (expectations-execute))
+
+(add-hook
+ 'emacs-lisp-mode-hook
+ (lambda ()
+   (local-set-key [(control ?\;) ?r ?t] 'eval-and-execute-expectations-buffer)
+   (local-set-key [(return)] 'newline-and-indent)))
