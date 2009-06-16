@@ -37,3 +37,10 @@
 ;;;;;;;; spiffy ruby mode
 (require 'spiffy-ruby-mode)
 (add-hook 'ruby-mode-hook 'spiffy-ruby-mode)
+
+;;;;;;;; color is good - let's actually see ansi-color stuff in color.
+(require 'ansi-color)
+(require 'comint)
+(require 'compile)
+(setq ansi-color-for-comint-mode t)
+(add-hook 'comint-output-filter-functions 'ansi-color-process-output)
