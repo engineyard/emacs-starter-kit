@@ -1,0 +1,3 @@
+[submodule "vendor/spiffy"]
+	path = vendor/spiffy
+	url = git://github.com/smerritt/spiffy-elisp.git
