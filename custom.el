@@ -24,8 +24,12 @@
   (require 'linum)
   (global-linum-mode 1))
 
-;;;;;;;; spiffy textmate mode
+;;;;;;;; spiffy mode
 (add-to-list 'load-path "~/.emacs.d/vendor/spiffy")
+(setq spiffy-enable-minor-mode t)
+(require 'spiffy)
+
+;;;;;;;; spiffy textmate mode
 (require 'spiffy-textmate-mode)
 (add-hook 'coding-hook 'spiffy-textmate-mode)
 
