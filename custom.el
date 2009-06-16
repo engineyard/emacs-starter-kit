@@ -38,9 +38,12 @@
       (mapcar (lambda (x) (* 2 x))
               (reverse (spiffy-downfrom 100))))
 
-;;;;;;;; spiffy ruby mode
+;;;;;;;; Ruby
 (require 'spiffy-ruby-mode)
 (add-hook 'ruby-mode-hook 'spiffy-ruby-mode)
+
+;; rackup files are ruby too
+(add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
 
 ;;;;;;;; color is good - let's actually see ansi-color stuff in color.
 (require 'ansi-color)
