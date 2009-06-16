@@ -3,6 +3,7 @@
 (setq confirm-kill-emacs 'yes-or-no-p)
 (random t)                              ; reseed
 (server-start)
+(global-auto-revert-mode 1)
 
 ;; haml
 (require 'haml-mode nil t)
