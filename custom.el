@@ -33,3 +33,7 @@
 (setq tab-stop-list
       (mapcar (lambda (x) (* 2 x))
               (reverse (spiffy-downfrom 100))))
+
+;;;;;;;; spiffy ruby mode
+(require 'spiffy-ruby-mode)
+(add-hook 'ruby-mode-hook 'spiffy-ruby-mode)
