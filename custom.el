@@ -27,8 +27,7 @@
 ;;;;;;;; spiffy textmate mode
 (add-to-list 'load-path "~/.emacs.d/vendor/spiffy")
 (require 'spiffy-textmate-mode)
-(add-hook 'codking-hook 'spiffy-textmate-mode)
-
+(add-hook 'coding-hook 'spiffy-textmate-mode)
 
 ;; get the tabstops right for spiffy-textmate-mode's indentations
 (setq tab-stop-list
