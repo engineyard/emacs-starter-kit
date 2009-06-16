@@ -15,6 +15,12 @@
 ;; just nice to have everywhere
 (add-hook 'coding-hook (lambda () (setq tab-width 2)))
 
+;; hooray hippie-expand
+(setq hippie-expand-try-functions-list (cons 'yas/hippie-try-expand hippie-expand-try-functions-list))
+(global-set-key [(f6)] 'next-error)
+(global-set-key [(shift f6)] 'previous-error)
+(global-set-key [(control tab)] 'hippie-expand)
+
 
 ;;;;;;;;;; stuff that's not on ELPA. too lazy to upload it.
 
