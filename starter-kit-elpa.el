@@ -10,6 +10,7 @@
                                    ;; 'nxml
                                    'gist
                                    'paredit
+                                   'yasnippet-bundle
                                    'nav)
   "Libraries that should be installed by default.")
 
