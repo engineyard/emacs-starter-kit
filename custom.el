@@ -21,7 +21,6 @@
 (global-set-key [(shift f6)] 'previous-error)
 (global-set-key [(control tab)] 'hippie-expand)
 
-
 ;;;;;;;;;; stuff that's not on ELPA. too lazy to upload it.
 
 ;;;;;;;; line numbers on the left in a gui
@@ -50,6 +49,8 @@
 
 (setq ruby-deep-arglist nil)
 (setq ruby-deep-indent-paren nil)
+
+(yas/load-directory "~/.emacs.d/snippets")
 
 ;; rackup files are ruby too
 (add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
