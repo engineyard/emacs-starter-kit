@@ -12,6 +12,10 @@
 ;; I want my lambdas left alone.
 (remove-hook 'coding-hook 'pretty-lambdas)
 
+;; don't iconify on C-z when running in X
+;; or exit emacs (!) when running in Emacs.app
+(when window-system (global-unset-key "\C-z"))
+
 ;; haml
 (require 'haml-mode nil t)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
