@@ -8,6 +8,10 @@
 (server-start)
 (global-auto-revert-mode 1)
 
+;; while I <square box> Unicode as much as the next guy,
+;; I want my lambdas left alone.
+(remove-hook 'coding-hook 'pretty-lambdas)
+
 ;; haml
 (require 'haml-mode nil t)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
