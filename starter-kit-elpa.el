@@ -11,6 +11,7 @@
                                    'gist
                                    'paredit
                                    'yasnippet-bundle
+                                   'clojure-mode
                                    'nav)
   "Libraries that should be installed by default.")
 
