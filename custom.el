@@ -29,6 +29,9 @@
 (global-set-key [(shift f6)] 'previous-error)
 (global-set-key [(control tab)] 'hippie-expand)
 
+;; Other Random Keybindings
+(global-set-key [(kp-delete)] 'delete-char)
+
 ;;;;;;;;;; stuff that's not on ELPA. too lazy to upload it.
 
 ;;;;;;;; line numbers on the left in a gui
