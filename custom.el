@@ -16,6 +16,9 @@
 ;; or exit emacs (!) when running in Emacs.app
 (when window-system (global-unset-key "\C-z"))
 
+;; don't use ESC as a prefix, but rather do the same thing C-g does.
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
 ;; haml
 (require 'haml-mode nil t)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
