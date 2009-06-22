@@ -52,6 +52,9 @@
 (require 'spiffy-textmate-mode)
 (add-hook 'coding-hook 'spiffy-textmate-mode)
 
+;;;;;;;; spiffy macos mode
+(autoload 'spiffy-macos-mode "spiffy-macos-mode" nil t)
+
 ;; get the tabstops right for spiffy-textmate-mode's indentations
 (setq tab-stop-list
       (mapcar (lambda (x) (* 2 x))
