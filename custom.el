@@ -77,6 +77,10 @@
   (eval-buffer)
   (expectations-execute))
 
+;;;;;;;; feature (cucumber) mode
+(add-to-list 'load-path "~/.emacs.d/vendor/cucumber")
+(require 'feature-mode)
+
 (add-hook
  'emacs-lisp-mode-hook
  (lambda ()
