@@ -1,4 +1,8 @@
+;; Pretty Colors
 (color-theme-twilight)
+
+;; I actually don't like auto-fill most of the time.
+(remove-hook 'text-mode-hook 'turn-on-auto-fill)
 
 ;; keen select mode
 (add-to-list 'load-path "~/.emacs.d/vendor/keen")
