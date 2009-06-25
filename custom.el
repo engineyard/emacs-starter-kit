@@ -95,3 +95,14 @@
  (lambda ()
    (local-set-key [(control ?\;) ?r ?t] 'eval-and-execute-expectations-buffer)
    (local-set-key [(return)] 'newline-and-indent)))
+
+;;;;;;;; To launch nav on left side: M-x nav RET
+;;;;;;;; To launch nav on right side: C-u M-x nav RET
+(defadvice other-window (around other-window-nop))
+(defadvice nav (around prefix-nav)
+  (if current-prefix-arg
+      (ad-activate-regexp "other-window-nop"))
+  (unwind-protect
+      ad-do-it
+    (ad-deactivate-regexp "other-window-nop")))
+(ad-activate-regexp "prefix-nav")
