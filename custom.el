@@ -34,10 +34,7 @@
 (global-set-key [(kp-delete)] 'delete-char)
 (global-set-key [(f6)] 'next-error)
 (global-set-key [(shift f6)] 'previous-error)
-(global-set-key [(control backspace)] (lambda ()
-                                        (interactive)
-                                        (kill-word -1)))
-
+(global-set-key [(control backspace)] 'backward-kill-word)
 
 ;;;;;;;;;; stuff that's not on ELPA. too lazy to upload it.
 
