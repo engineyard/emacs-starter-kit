@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [ $# -ne 1 ]
+then
+  echo "Usage - $0   file"
+  exit 1
+else
+  if [ -d "$1" ]
+  then
+    EMATE_DIR="`cd $1; pwd`" open /Applications/Emacs.app
+  else
+    EMATE_FILE="$1" open /Applications/Emacs.app
+  fi
+fi
