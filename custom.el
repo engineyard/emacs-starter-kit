@@ -35,6 +35,7 @@
 (global-set-key [(f6)] 'next-error)
 (global-set-key [(shift f6)] 'previous-error)
 (global-set-key [(control backspace)] 'backward-kill-word)
+(global-set-key [(control kp-delete)] 'kill-word)
 
 ;;;;;;;;;; stuff that's not on ELPA. too lazy to upload it.
 
