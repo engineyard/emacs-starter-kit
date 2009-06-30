@@ -17,7 +17,7 @@
 (when window-system (global-unset-key "\C-z"))
 
 ;; don't use ESC as a prefix, but rather do the same thing C-g does.
-(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+(global-set-key (kbd "<escape>") 'keyboard-quit)
 
 ;; haml
 (require 'haml-mode nil t)
