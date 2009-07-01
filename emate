@@ -7,8 +7,8 @@ then
 else
   if [ -d "$1" ]
   then
-    EMATE_DIR="`cd $1; pwd`" open /Applications/Emacs.app
+    EMATE_DIR="`cd $1; pwd`" open -a Emacs
   else
-    EMATE_FILE="$1" open /Applications/Emacs.app
+    EMATE_FILE="$1" open -a Emacs
   fi
 fi

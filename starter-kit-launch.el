@@ -1,9 +1,18 @@
 (defun emate-launch ()
-  (let (dir file)
-    (setq dir (getenv "EMATE_DIR"))
-    (setq file (getenv "EMATE_FILE"))
+  (let ((dir (getenv "EMATE_DIR"))
+        (file (getenv "EMATE_FILE")))
+    (if dir
+        (emate-launch-dir dir)
+      (if file
+          (emate-launch-file)))))
 
-    (if dir (progn (cd dir) (nav)))
-    )) ;; (if file (load-file file))))
+(defun emate-launch-dir (dir)
+  "Launch emacs like textmate launched on a directory"
+  (cd dir)
+  (nav))
+
+(defun emate-launch-file (file)
+  "Launch emacs like textmate launched on a (possibly non-existant) file"
+  (find-file file))
 
 (provide 'starter-kit-launch)
