@@ -4,7 +4,7 @@
     (if dir
         (emate-launch-dir dir)
       (if file
-          (emate-launch-file)))))
+          (emate-launch-file file)))))
 
 (defun emate-launch-dir (dir)
   "Launch emacs like textmate launched on a directory"
