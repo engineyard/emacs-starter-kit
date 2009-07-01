@@ -15,3 +15,6 @@
 (keen-select-define-key shell "!"
   (find-buffer-visiting "*eshell*")
   (eshell))
+
+;; Enable nice display of column and line numbers in the modeline
+(column-number-mode)
