@@ -6,5 +6,5 @@
 
 # If that failed, then open a new emacs visiting the file.
 if [ $? -ne 0 ]; then
-   open -a Emacs "${1}"
+   EOPEN_DIR="${PWD}" EOPEN_FILE="${1}" open -a Emacs
 fi

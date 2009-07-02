@@ -108,3 +108,7 @@
       ad-do-it
     (ad-deactivate-regexp "other-window-nop")))
 (ad-activate-regexp "prefix-nav")
+
+;;;;;;;; eopen support
+(require 'eopen)
+(eopen-launch)
