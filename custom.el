@@ -8,6 +8,12 @@
 (server-start)
 (global-auto-revert-mode 1)
 
+
+;; Mac-specific stuff
+(when (eq window-system 'ns)
+  (setq mac-command-modifier 'meta))
+
+
 ;; while I <square box> Unicode as much as the next guy,
 ;; I want my lambdas left alone.
 (remove-hook 'coding-hook 'pretty-lambdas)
