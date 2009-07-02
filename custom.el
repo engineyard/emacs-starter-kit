@@ -8,6 +8,10 @@
 (server-start)
 (global-auto-revert-mode 1)
 
+;; bar cursor
+(add-to-list 'load-path "~/.emacs.d/vendor/bar-cursor")
+(require 'bar-cursor)
+(bar-cursor-mode 1)
 
 ;; Mac-specific stuff
 (when (eq window-system 'ns)
