@@ -9,3 +9,5 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/slime")
 (require 'slime)
 (slime-setup)
+
+(color-theme-twilight)
