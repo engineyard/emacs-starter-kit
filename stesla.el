@@ -18,3 +18,14 @@
 
 ;; Enable nice display of column and line numbers in the modeline
 (column-number-mode)
+
+;; Erlang Stuff
+(add-to-list 'load-path "~/.emacs.d/vendor/distel/elisp")
+(require 'distel)
+(distel-setup)
+
+(setq erlang-indent-level 2)
+(let* ((mnesia-dir (concat (expand-file-name "~/.emacs.d/") "mnesia"))
+       (quoted-mnesia-dir (concat "\"" mnesia-dir "\""))
+       (options (list "-sname" "emacs" "-mnesia" "dir" quoted-mnesia-dir)))
+  (setq inferior-erlang-machine-options options))
