@@ -25,7 +25,17 @@
 (distel-setup)
 
 (setq erlang-indent-level 2)
+(setq erlang-compile-function 'stesla-compile-function)
 (let* ((mnesia-dir (concat (expand-file-name "~/.emacs.d/") "mnesia"))
        (quoted-mnesia-dir (concat "\"" mnesia-dir "\""))
        (options (list "-sname" "emacs" "-mnesia" "dir" quoted-mnesia-dir)))
   (setq inferior-erlang-machine-options options))
+
+(defun stesla-compile-function ()
+  (interactive)
+  (let ((olddir (pwd))
+        (dir (locate-dominating-file (buffer-file-name) "Rakefile")))
+    (cd dir)
+    (unwind-protect
+        (compile "rake")
+      (cd olddir))))      
