@@ -1,3 +1,6 @@
+;; Keybindings
+(global-set-key (kbd "C-x h") 'mark-whole-buffer)
+
 ;; Pretty Colors
 (color-theme-twilight)
 
