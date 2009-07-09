@@ -7,6 +7,9 @@
  (setq swank-clojure-extra-classpaths '("~/clojure-contrib/clojure-contrib.jar" "~/euler/lib")))
 
 (add-to-list 'load-path "~/.emacs.d/vendor/slime")
+(set-language-environment "UTF-8")
+(setq slime-net-coding-system 'utf-8-unix)
+
 (require 'slime)
 (slime-setup)
 
