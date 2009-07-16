@@ -13,4 +13,8 @@
 (require 'slime)
 (slime-setup)
 
+(defun sliem (&rest args)
+  (interactive)
+  (apply 'slime args))
+
 (color-theme-twilight)
