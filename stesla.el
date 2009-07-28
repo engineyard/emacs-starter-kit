@@ -31,7 +31,9 @@
 (setq erlang-compile-function 'stesla-compile-function)
 (let* ((mnesia-dir (concat (expand-file-name "~/.emacs.d/") "mnesia"))
        (quoted-mnesia-dir (concat "\"" mnesia-dir "\""))
-       (options (list "-sname" "emacs" "-mnesia" "dir" quoted-mnesia-dir)))
+       (options (list "-sname" "emacs"
+                      "-mnesia" "dir" quoted-mnesia-dir
+                      "-boot" "start_sasl")))
   (setq inferior-erlang-machine-options options))
 
 (defun stesla-compile-function ()
