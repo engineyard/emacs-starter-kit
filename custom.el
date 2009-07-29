@@ -37,8 +37,15 @@
 (add-hook 'coding-hook (lambda () (setq tab-width 2)))
 
 ;; hooray hippie-expand
+;; NB: for some reason, pressing control-tab causes its bound command
+;; to be called twice. This is not helpful.
+;;
+;; For proof, eval this:
+;; (global-set-key [(control tab)] (lambda nil (interactive)
+;;                                    (insert "control tab was here")))
+;; and then press control-tab.
 (setq hippie-expand-try-functions-list (cons 'yas/hippie-try-expand hippie-expand-try-functions-list))
-(global-set-key [(control tab)] 'hippie-expand)
+(global-set-key [(shift tab)] 'hippie-expand)
 
 ;; Other Random Keybindings
 (global-set-key [(kp-delete)] 'delete-char)
