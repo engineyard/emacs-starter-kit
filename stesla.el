@@ -4,6 +4,10 @@
 ;; Pretty Colors
 (color-theme-twilight)
 
+;; I like to be able to see my cursor
+(bar-cursor-mode)
+(set-cursor-color "white")
+
 ;; I actually don't like auto-fill most of the time.
 (remove-hook 'text-mode-hook 'turn-on-auto-fill)
 
