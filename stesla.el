@@ -1,5 +1,6 @@
 ;; Keybindings
 (global-set-key (kbd "C-x h") 'mark-whole-buffer)
+(global-set-key (kbd "C-k") 'kill-line)
 
 ;; Pretty Colors
 (color-theme-twilight)
