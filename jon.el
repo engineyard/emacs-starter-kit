@@ -1,8 +1,3 @@
-;; color-theme
-;; use M-x color-theme-select to see options
-(add-to-list 'load-path "~/.emacs.d/vendor/color-theme")
-(require 'color-theme)
-
 ;; erlang mode
 (setq load-path (cons "/usr/local/lib/erlang/lib/tools-2.6.4/emacs" load-path))
 (setq erlang-root-dir "/usr/local/lib/erlang")
@@ -15,4 +10,6 @@
     (setq load-path (append load-path (list distel-dir)))))
 (require 'distel)
 (distel-setup)
+
+(color-theme-twilight)
 
