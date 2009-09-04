@@ -32,6 +32,9 @@
 ;; haml
 (require 'haml-mode nil t)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
+(add-hook 'haml-mode-hook
+          (lambda ()
+            (run-hooks 'coding-hook)))
 
 ;; just nice to have everywhere
 (add-hook 'coding-hook (lambda () (setq tab-width 2)))
