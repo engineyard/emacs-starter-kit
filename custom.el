@@ -147,3 +147,5 @@
 (eopen-launch)
 
 (add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode))
+(setq javascript-indent-level '2)
+
