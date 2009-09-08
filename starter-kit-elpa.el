@@ -7,12 +7,13 @@
                                    'inf-ruby
                                    'js2-mode
                                    'css-mode
-                                   ;; 'nxml
                                    'gist
                                    'paredit
                                    'yasnippet-bundle
                                    'clojure-mode
-                                   'nav)
+                                   'nav
+                                   'nxml-mode
+                                   'paredit)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()
