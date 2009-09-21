@@ -150,3 +150,6 @@
 ;; ssh is faster than scp for the small files we usually edit
 ;; remotely.
 (setq tramp-default-method "ssh")
+
+(require 'windmove)
+(windmove-default-keybindings 'super)
