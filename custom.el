@@ -14,9 +14,16 @@
 (bar-cursor-mode 1)
 
 ;; Mac-specific stuff
-(when (eq window-system 'ns)
-  (setq mac-command-modifier 'meta))
+(defun make-option-super ()
+  (interactive)
+  (setq mac-option-modifier 'super))
 
+(defun make-option-meta ()
+  (interactive)
+  (setq mac-option-modifier 'meta))
+
+(when (eq window-system 'ns)
+  (make-option-meta))
 
 ;; while I <square box> Unicode as much as the next guy,
 ;; I want my lambdas left alone.
