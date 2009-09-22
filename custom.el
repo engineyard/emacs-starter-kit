@@ -96,6 +96,17 @@
 ;; rackup files are ruby too
 (add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
 
+(defun d-and-autoindent-end (times)
+  (interactive "p")
+  (insert "d")
+  (if (looking-back "[[:space:]]end" 4)
+      (indent-according-to-mode))
+  (if (> times 1)
+      (d-and-autoindent-end (1- times))))
+
+(add-hook 'ruby-mode-hook (lambda ()
+                            (local-set-key [(?d)] 'd-and-autoindent-end)))
+
 ;;;;;;;; color is good - let's actually see ansi-color stuff in color.
 (require 'ansi-color)
 (require 'comint)
