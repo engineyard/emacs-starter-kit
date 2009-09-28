@@ -23,6 +23,7 @@
   (setq mac-option-modifier 'meta))
 
 (when (eq window-system 'ns)
+  (setq mac-command-modifier 'meta)
   (make-option-meta))
 
 ;; while I <square box> Unicode as much as the next guy,
