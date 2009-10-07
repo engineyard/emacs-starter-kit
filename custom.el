@@ -37,9 +37,16 @@
 ;; don't use ESC as a prefix, but rather do the same thing C-g does.
 (global-set-key (kbd "<escape>") 'keyboard-quit)
 
-;; haml
+;;;;;; haml
 (require 'haml-mode nil t)
-(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
+;; add-to-list doesn't add it if it's already present.
+;; haml-mode is in auto-mode-alist, but before nxhtml-mode, which is
+;; associated with basically *.html*, which matches foo.html.haml.
+;; nxhtml-mode is no damn good at dealing with haml.
+(setq auto-mode-alist
+      (cons '("\\.haml$" . haml-mode)
+            auto-mode-alist))
+
 (add-hook 'haml-mode-hook
           (lambda ()
             (run-hooks 'coding-hook)))
