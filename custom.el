@@ -101,9 +101,6 @@
 
 (yas/load-directory "~/.emacs.d/snippets")
 
-;; rackup files are ruby too
-(add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
-
 (defun d-and-autoindent-end (times)
   (interactive "p")
   (insert "d")
