@@ -104,7 +104,10 @@
 (defun d-and-autoindent-end (times)
   (interactive "p")
   (insert "d")
-  (if (looking-back "[[:space:]]end" 4)
+  (if (and
+       (>= (point)
+           (+ 4 (point-min)))
+       (looking-back "[[:space:]]end" 4))
       (indent-according-to-mode))
   (if (> times 1)
       (d-and-autoindent-end (1- times))))
