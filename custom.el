@@ -150,7 +150,9 @@
 ;;;;;;;; feature (cucumber) mode
 (add-to-list 'load-path "~/.emacs.d/vendor/cucumber")
 (require 'feature-mode)
+(add-hook 'feature-mode-hook 'spiffy-textmate-mode)
 
+;; elisp tests
 (add-hook
  'emacs-lisp-mode-hook
  (lambda ()
@@ -179,3 +181,4 @@
 
 (require 'windmove)
 (windmove-default-keybindings 'super)
+
