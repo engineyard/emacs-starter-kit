@@ -83,6 +83,7 @@
 ;;;;;;;; spiffy textmate mode
 (require 'spiffy-textmate-mode)
 (add-hook 'coding-hook 'spiffy-textmate-mode)
+(add-hook 'css-mode-hook 'spiffy-textmate-mode)
 
 ;;;;;;;; spiffy macos mode
 (autoload 'spiffy-macos-mode "spiffy-macos-mode" nil t)
