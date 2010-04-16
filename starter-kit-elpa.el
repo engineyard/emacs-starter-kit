@@ -5,15 +5,15 @@
 (defvar starter-kit-packages (list 'idle-highlight
                                    'ruby-mode
                                    'inf-ruby
-                                   'js2-mode
                                    'css-mode
-                                   'gist
-                                   'paredit
                                    'yasnippet-bundle
                                    'clojure-mode
                                    'nav
                                    'nxml-mode
-                                   'paredit)
+                                   'paredit
+                                   'yaml-mode
+                                   'magit
+                                   'gist)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()
