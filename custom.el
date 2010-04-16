@@ -1,3 +1,14 @@
+;; Extra packages that the starter kit doesn't give us
+(setq starter-kit-packages
+      (append starter-kit-packages (list 'yasnippet-bundle
+                                         'clojure-mode
+                                         'nav
+                                         'nxml-mode
+                                         'paredit
+                                         'haml-mode)))
+(starter-kit-elpa-install)
+
+
 ;; for those of us lacking superhuman eyeballs
 (set-cursor-color "black")
 

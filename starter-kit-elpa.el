@@ -6,11 +6,6 @@
                                    'ruby-mode
                                    'inf-ruby
                                    'css-mode
-                                   'yasnippet-bundle
-                                   'clojure-mode
-                                   'nav
-                                   'nxml-mode
-                                   'paredit
                                    'yaml-mode
                                    'magit
                                    'gist)
