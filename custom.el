@@ -134,6 +134,14 @@
 (setq ansi-color-for-comint-mode t)
 (add-hook 'comint-output-filter-functions 'ansi-color-process-output)
 
+;;;;;;;; keep the path of executed programs synced up with what it is
+;;;;;;;; in the shell
+(add-hook 'compilation-mode-hook
+          (lambda nil
+            (setenv "PATH"
+                    (shell-command-to-string "$SHELL -l -c 'echo -n $PATH'"))))
+
+
 ;;;;;;;; emacs-lisp development
 (add-to-list 'load-path "~/.emacs.d/vendor/el-expectations")
 (defun eval-and-execute-expectations-buffer ()
