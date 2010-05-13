@@ -7,8 +7,8 @@
 (setq ns-pop-up-frames nil)
 (define-key *spiffy-tm-keymap* [(meta ?t)] 'peepopen-goto-file-gui)
 
-(defun open (project) (interactive (list (read-string "Peepopen for project (default awsm): " nil nil "awsm")))
-  (flet ((textmate-project-root () (concat "~/p/ey/" project)))
+(defun open (project) (interactive (list (read-directory-name "Peepopen for project (default awsm): " "~/p/" "~/p/awsm")))
+  (flet ((textmate-project-root () (file-truename project)))
     (peepopen-goto-file-gui)))
 
 (global-set-key [(meta ?o)] 'open)
