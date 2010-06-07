@@ -5,7 +5,8 @@
                                          'nav
                                          'nxml-mode
                                          'paredit
-                                         'haml-mode)))
+                                         'haml-mode
+                                         'sass-mode)))
 (starter-kit-elpa-install)
 
 
